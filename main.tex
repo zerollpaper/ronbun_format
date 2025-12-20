@@ -1,0 +1,37 @@
+\documentclass[a4paper,11pt]{ltjsreport}
+
+\input{/path/to/jpreamble}
+
+\begin{document}
+%%%%%%%タイトル%%%%%%%
+
+\input{0_cover}
+\thispagestyle{empty}               %%ページ番号を空にする
+
+\clearpage   
+
+%%
+%%
+%%%%%%要旨・目次%%%%%%
+\pagenumbering{roman} 
+
+%\setcounter{tocdepth}{2}
+\tableofcontents                    %%目次の作成
+\clearpage       
+%%
+%%%%%序文・本文%%%%%%%   
+
+\pagenumbering{arabic}           %%ページ番号をarabic体に
+\input{1_intro}
+
+%%
+\clearpage
+%%%%%%謝辞，参考文献%%%%%%%%
+\pagenumbering{roman} 
+\bibliographystyle{plain} % jplain, plainurl
+\bibliography{/path/to/bibfile} % e.g. library.bib
+%%
+\input{9_ack}
+
+
+\end{document}
